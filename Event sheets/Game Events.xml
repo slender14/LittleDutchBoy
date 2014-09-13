@@ -3,12 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game Events</name>
     <events>
+        <variable constant="0" name="Variable1" sid="3493840278015278" static="0" type="number">0</variable>
         <variable constant="0" name="Score" sid="4776420617906794" static="0" type="number">0</variable>
         <variable constant="0" name="waterLevel" sid="1486150611914227" static="0" type="number">0</variable>
         <event-block sid="6922085363675683">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="5776919506103175" type="System">
-                    <param id="0" name="Interval (seconds)">3</param>
+                    <param id="0" name="Interval (seconds)">0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8106446002029746" type="System">
+                    <param id="0" name="Variable">Variable1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -49,6 +55,11 @@
                     <param id="0" name="Which">0</param>
                     <param id="1" name="X">Sprite.X</param>
                     <param id="2" name="Y">Sprite.Y</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5234870473860862" type="System">
+                    <param id="0" name="Variable">Variable1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -94,6 +105,9 @@
                 <action id="-2" name="Set Y" sid="4284176556558061" type="sharkie">
                     <param id="0" name="Y">Sprite2.Y-waterLevel/20</param>
                 </action>
+                <action id="-2" name="Set Y" sid="6366963662497723" type="Sprite9">
+                    <param id="0" name="Y">Sprite2.Y-waterLevel/20</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3888506491506157">
@@ -111,6 +125,10 @@
                 </action>
                 <action id="2" name="Set visible" sid="6080287890742105" type="TryAgain">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="645797049528056" type="System">
+                    <param id="0" name="Variable">Variable1</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -132,6 +150,10 @@
                 <action id="2" name="Set visible" sid="2531285217067827" type="TryAgain">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-11" name="Subtract from" sid="9086040897077238" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8201592856011163">
@@ -150,6 +172,21 @@
             </conditions>
             <actions>
                 <action id="-26" name="Restart layout" sid="2846696369748188" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="6975698025783293">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3936024920429063" type="System">
+                    <param id="0" name="Interval (seconds)">0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="4929138534056678" type="System">
+                    <param id="0" name="Object to create">Sprite9</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">10</param>
+                    <param id="3" name="Y">0</param>
+                </action>
             </actions>
         </event-block>
     </events>
