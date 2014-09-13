@@ -91,6 +91,9 @@
                 <action id="-2" name="Set Y" sid="8643694001550026" type="Sprite2">
                     <param id="0" name="Y">Sprite2.Y - waterLevel / 20</param>
                 </action>
+                <action id="-2" name="Set Y" sid="4284176556558061" type="sharkie">
+                    <param id="0" name="Y">Sprite2.Y-waterLevel/20</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3888506491506157">
